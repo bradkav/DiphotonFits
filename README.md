@@ -12,3 +12,6 @@ Description of files:
 - PlotFits.py: Plot the best fit parameter values as calculated by ATLASfits.py. Set 'include_signal=0' near the start of the code to plot the background-only results. Set 'include_signal=1' for the wide resonance signal + background fits.
 - AddScatter.py: Run to add random noise to the first 10 ATLAS data bins (as described in arXiv:1601.07330). AddScatter.py reads in 'ATLASdata.txt' and saves the noisy data to 'ATLASdata1.txt'. Note that ATLASfits.py and PlotFits.py perform calculations using 'ATLASdata1.txt'.
 - ATLASfits_utils.py: Module containing likelihood and other auxiliary functions for fitting and plotting.
+- ATLASdata.txt: Digitised ATLAS diphoton data.
+- ATLASdata1.txt: A copy of ATLASdata.txt which is read in by other files. Running AddScatter.py will add digitisation noise to ATLASdata1.txt
+- 1601.07330.pdf: The paper in which the results of these calculations are reported.
