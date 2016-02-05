@@ -129,13 +129,6 @@ def lnprob(x, BG_type, signal_type):
         a1 = x[2+ind]
         a2 = x[3+ind]
     
-    if (BG_type == 6):
-        p = 10**x[0]
-        b = x[1]
-        c0 = x[2]
-        a0 = x[3]
-        a1 = x[4]
-        
     #Unpack and calculate signal variables
     # M - resonance mass
     # logA - log_10(Number of signal events)
@@ -149,7 +142,6 @@ def lnprob(x, BG_type, signal_type):
             alpha = x[Nbg+1]
             logA = x[Nbg+2] 
             lp_sig = lnprior_sig(logA, M, alpha)
-        
             
         if not np.isfinite(lp_sig):
             return -np.inf
@@ -202,7 +194,7 @@ def lnprob(x, BG_type, signal_type):
 
 def getBestFit(BG_type, signal_type):
     #emcee parameters
-    nwalkers, nsamps = 20, 200
+    nwalkers, nsamps = 20, 1000
     
     #Specify number of parameters
     Nbg = Nbgparams[BG_type]
