@@ -2,7 +2,9 @@
 
 [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.45646.svg)](http://dx.doi.org/10.5281/zenodo.45646)
 
-ATLASfits is a collection of python code (and a couple of data files) which allows you to perform fits to the (binned, digitised) ATLAS diphoton invariant mass spectrum, as described at http://cds.cern.ch/record/2114853. This code should allow you to reproduce the results of http://arxiv.org/abs/1601.07330. Please cite that paper if you make use of this code in your own work.
+ATLASfits is a collection of python code (and a couple of data files) which allows you to perform fits to the (binned, digitised) ATLAS diphoton invariant mass spectrum, as described at http://cds.cern.ch/record/2114853. This code should allow you to reproduce the results of http://arxiv.org/abs/1601.07330. Please cite that paper if you make use of this code in your own work. 
+
+Please send any comments or corrections to: bradkav@gmail.com.
 
 Note: Requires emcee, available at http://dan.iel.fm/emcee/current/.
 
