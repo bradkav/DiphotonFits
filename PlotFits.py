@@ -21,17 +21,16 @@ mpl.rc('font', **font)
 
 from ATLASfits_utils import getBestFit, f_ATLAS0, f_ATLAS1, f_wide
 
+#---Options---
+#Include signal in the fits (set to 0 for BG-only)
+include_signal = 1
+
 #---Functions---
 #Calculate Poisson CLs on the data
 def calcError1(k, CL):
     return k - 0.5*chi2.ppf((1-CL)/2, 2*k)
 def calcError2(k, CL):
     return 0.5*chi2.ppf((1+CL)/2.0, 2*k + 2) - k
-
-
-#---Options---
-#Include signal in the fits (set to 0 for BG-only)
-include_signal = 0
 
 
 #---Load in the ATLAS data and calculate bins
@@ -50,10 +49,10 @@ m = np.linspace(200,1850,100)
 sig_str = 'BG-only'
 if (include_signal): sig_str = 'wide'
 
-bf_A0 = np.loadtxt('Fits_BG=0_'+sig_str+'.txt')
-bf_A1 = np.loadtxt('Fits_BG=1_'+sig_str+'.txt')
-bf_A0N = np.loadtxt('Fits_BG=3_'+sig_str+'.txt')
-bf_A1N = np.loadtxt('Fits_BG=4_'+sig_str+'.txt')
+bf_A0 = np.loadtxt('fits/Fits_BG=0_'+sig_str+'.txt')
+bf_A1 = np.loadtxt('fits/Fits_BG=1_'+sig_str+'.txt')
+bf_A0N = np.loadtxt('fits/Fits_BG=3_'+sig_str+'.txt')
+bf_A1N = np.loadtxt('fits/Fits_BG=4_'+sig_str+'.txt')
 
 #Calculate BG curves for plotting
 y_A0 = f_ATLAS0(m, bf_A0[0], bf_A0[1])

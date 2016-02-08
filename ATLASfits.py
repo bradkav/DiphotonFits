@@ -13,8 +13,7 @@ import numpy as np
 from ATLASfits_utils import getBestFit
 
 #----Options----
-#Print best-fit points to file, for plotting
-#Note: This will generate 18 files...
+#Print best-fit points to file (in fits folder)
 saveResults = 1 
 
 #----Main procedure-----
@@ -40,21 +39,21 @@ for i in range(6):
     print "    Background-only"
     print "        lnL:", '{:.2f}'.format(like_BG)
     if (saveResults):
-        np.savetxt('Fits_BG=' + str(i) + '_BG-only.txt', bf_BG)
+        np.savetxt('fits/Fits_BG=' + str(i) + '_BG-only.txt', bf_BG)
     
     #Narrow width fit
     like_NWA, bf_NWA = getBestFit(i, 1)    
     print "    Signal+BG (NWA)"
     print "        lnL:", '{:.2f}'.format(like_NWA)
     if (saveResults):
-        np.savetxt('Fits_BG=' + str(i)+ '_NWA.txt', bf_NWA)
+        np.savetxt('fits/Fits_BG=' + str(i)+ '_NWA.txt', bf_NWA)
 
     #Free width fit
     like_wide, bf_wide = getBestFit(i, 2)    
     print "    Signal+BG (Free width)"
     print "        lnL:", '{:.2f}'.format(like_wide)
     if (saveResults):
-        np.savetxt('Fits_BG=' + str(i) + '_wide.txt', bf_wide)
+        np.savetxt('fits/Fits_BG=' + str(i) + '_wide.txt', bf_wide)
 
     #Calculate significance
     sig_NWA = np.sqrt(2*(like_NWA - like_BG))
