@@ -25,7 +25,7 @@ for i in range(10):
 print "ATLAS data (with digitisation noise):"
 print data
 
-#Save to file (ATLASfits.py reads in 'ATLASdata1.txt' *not* 'ATLASdata.txt')
+#Save to file (DiphotonFits.py reads in 'ATLASdata1.txt' *not* 'ATLASdata.txt')
 np.savetxt("ATLASdata1.txt", np.c_[xvals, data])
 
 
