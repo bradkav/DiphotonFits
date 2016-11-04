@@ -1,16 +1,16 @@
-#--ATLASfits.py - Version 1 - 04/02/2016
+#--DiphotonFits.py - Version 1 - 04/02/2016
 #--Author: Bradley J Kavanagh
 #--Summary: Code for fitting the ATLAS diphoton data
 #--and calculating the significance of the 750 GeV excess
 #--Note: Requires emcee (http://dan.iel.fm/emcee/current/)
-#--Please report any problems to: bradley.kavanagh@lpthe.jussieu.fr
+#--Please report any problems to: bradkav@gmail.com
 
 
 
 print "----Likelihood fits to ATLAS diphoton data---"
 
 import numpy as np
-from ATLASfits_utils import getBestFit
+from DiphotonFits_utils import getBestFit
 
 #----Options----
 #Print best-fit points to file (in fits folder)

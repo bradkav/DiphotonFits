@@ -1,9 +1,9 @@
-#--ATLASfits_utils.py - Version 1 - 04/02/2016
+#--DiphotonFits_utils.py - Version 1 - 04/02/2016
 #--Author: Bradley J Kavanagh
-#--Summary: Auxiliary functions to be used in ATLASfits.py
+#--Summary: Auxiliary functions to be used in DiphotonFits.py
 #--and the associated plotting routines
 #--Note: Requires emcee (http://dan.iel.fm/emcee/current/)
-#--Please report any problems to: bradley.kavanagh@lpthe.jussieu.fr
+#--Please report any problems to: bradkav@gmail.com
 
 import sys
 import numpy as np
@@ -180,7 +180,7 @@ def lnprob(x, BG_type, signal_type):
             if (Ne < 1e-10):
                 Ne = 1e-10      
             if (Ne < 0):
-                print "ATLASfits.py (near line 200): You messed up..."
+                print "DiphotonFits.py (near line 200): You messed up..."
             if not np.isfinite(Ne):
                 return -np.inf
         

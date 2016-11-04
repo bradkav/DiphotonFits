@@ -2,10 +2,10 @@
 #--Author: Bradley J Kavanagh
 #--Summary: Code for plotting BG-only and signal+BG
 #--fits to the ATLAS 750 GeV excess
-#--Run ATLASfits.py with saveResults=1 to get the necessary files
+#--Run DiphotonFits.py with saveResults=1 to get the necessary files
 #--Change 'include_signal' lower down in the options to
 #--plot with or without signal
-#--Please report any problems to: bradley.kavanagh@lpthe.jussieu.fr
+#--Please report any problems to: bradkav@gmail.com
 
 print "----Plotting fits to ATLAS diphoton data---"
 
@@ -99,9 +99,9 @@ pl.text(250, 0.18, r'$n_\mathrm{bins} = 40$' )
 pl.ylim(1e-1, 1e3)
 pl.xlim(150,1750)
 
-outfile = 'ATLASfits_BG-only.pdf'
+outfile = 'DiphotonFits_BG-only.pdf'
 if (include_signal):
-    outfile = 'ATLASfits_BG+Sig.pdf'
+    outfile = 'Diphotonfits_BG+Sig.pdf'
 
 pl.xlabel(r'$m_{\gamma \gamma}$ [GeV]', fontsize=18.0)
 pl.ylabel('Events / 40 GeV')
